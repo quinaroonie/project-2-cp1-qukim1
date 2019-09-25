@@ -13,16 +13,21 @@ export class Content extends React.Component {
         };
     }
     
+   
+    
     componentDidMount() {
-        Socket.on('update', (data) => {
-            this.setState(data);
-        });    
+        Socket.on('message received', (data) => {
+            console.log("Content recieved message");
+            this.setState({
+                'number_received': data['message']
+            });
+        });
     }
 
     render() {
         return (
             <div>
-                <h1>Hello from React!</h1>
+                <h1>HELLLOOOOOOOO</h1>
                 <div>
                     Data: {this.state.data}
                 </div>
