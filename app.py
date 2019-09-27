@@ -14,27 +14,19 @@ import models
 def hello():
     return flask.render_template('index.html')
 
-
-@socketio.on('connect') 
-def on_connect():
-    messages = models.Message.query.all()
     
 @socketio.on('connect')
 def on_connect():
     print('Someone connected!')
-    flask_socketio.emit('data' : 'You are Connected'
+    flask_socketio.emit('update', {
+        'data': 'Got your connection!'
     })
 
-@socketio.on('disconnect')
-def on_disconnect():
-    print('Someone disconnected!')
-    
-    
-    html = ['<li>' + m.text + '</li>' for m in messages]
-    return '<ul>' + ''.join(html) + '</ul>'
-    
 
 
+@socketio.on('message')
+def get_message(data):
+    print("message data: " + data.new_message) 
 
 socketio.run(
         app,
@@ -42,8 +34,6 @@ socketio.run(
         port=int(os.getenv('PORT', 8080)),
         debug=True
 )
-
-
 
 
 

@@ -4,6 +4,8 @@ import { Socket } from './Socket';
 
 
 
+import { MessageForm } from './MessageForm';
+
 
 export class Content extends React.Component {
     constructor(props) {
@@ -14,7 +16,6 @@ export class Content extends React.Component {
     }
     
    
-    
     componentDidMount() {
         Socket.on('message received', (data) => {
             console.log("Content recieved message");
@@ -27,7 +28,8 @@ export class Content extends React.Component {
     render() {
         return (
             <div>
-                <h1>HELLLOOOOOOOO</h1>
+                <h1>ChatBot</h1>
+                <MessageForm />
                 <div>
                     Data: {this.state.data}
                 </div>
