@@ -1,46 +1,17 @@
-# lecture-9-react
+What is the theme you’ll be using for project 2?
+    My theme is a chat-bot. 
+● How did you incorporate your theme within your project?
+    My chatbot is suppose to allow users to send messages to the robot.
+● What are at least 5 issues you encountered with your project? How did you fix them?
+    1. My application did not want to push to heroku. I am still solving this problem.
+    2. I had trouble with getting the server to work. I restarted the process and that fixed it.
+    3. I also had trouble with adding the database
+    4. Trying to nitpick where I messed up and fix the small errors took long. I would have 
+    to restart processes to make sure things work.
+    5. At first i couldn't push to github. But I got it to work by changing the name "origin".
+● What are known problems, if any, with your project?
+1. every push failed for heroku 
+2. my jsx did not work so for now it is left out. 
 
-Let's get React up and running with Flask. Run these commands in your Project 2 (or scratch) folder.
-
-## Upgrade Node version to 7
-
-```$ nvm install 7```
-
-## Install Webpack
-
-This line installs Webpack on your Cloud9 workspace.
-
-```$npm install webpack --save-dev```
-
-## Install `npm` dependencies from `package.json`
-
-This line starts `npm`, which looks inside our `package.json` file, retrieves a list of
-packages, and installs them to the `node_modules` folder inside your repository. `node_modules` folder **does not** need to be pushed to Heroku or GitHub.
-
-```$ npm install```
-
-**Note: This command MUST be ran from the folder that contains package.json! You will get an error if you are in a different folder!**
-
-## Compile Javascript using Webpack
-
-This line starts up Webpack, which looks inside `webpack.config.js`, loads
-configuration options, and starts transpiling your JS code into `static/script.js`.
-
-```$ npm run watch```
-
-(The program should not stop running. Leave it running.)
-
-## Run the web app
-
-Open a new terminal in your AWS Cloud9 environment (click the little green + button near your current terminal and choose 'New Terminal'). Run `app.py` (from the same folder, but new terminal) and verify that the React renders. You should see "Hello World from React!" in the preview.
-
-**Do not manually edit `static/script.js`! It will update when you make changes. You do need to push this file to Heroku and GitHub**
-
-## Edit HTML
-
-Find the text that says "Hello World from React!" Make a change. Your webpack should still be running in the other terminal (and some logs will spit out). Try previewing the changes in the Preview Window in AWS. Notice that nothing is updating. You need to click 'Pop out to New Window', and hard refresh the browser (see command below). 
-
-PS This is a known problem for a bunch of people. Unfortunately, there is no known fix besides turning off the cache option for the whole browser (which we don't want to do).
-
-**You will always need to do a hard refresh (Ctrl+R/Cmd+Shift+R) of an external tab in your browser (while Webpack is running) to see changes**
-
+● How would you improve it if you had more time?
+1. tried to get heroku to deploy before I started. I would get jsx to work and then get the server working. 
