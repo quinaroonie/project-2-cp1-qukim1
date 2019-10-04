@@ -32,6 +32,8 @@ export class Content extends React.Component {
                 <MessageForm />
                 <div>
                     Data: {this.state.data}
+                    
+                    
                 </div>
             </div>
         );
