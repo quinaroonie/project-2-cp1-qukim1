@@ -4,10 +4,10 @@ import flask_sqlalchemy
 
 
 app = flask.Flask(__name__)
-socketio = flask_socketio.SocketIO(app) 
+
 
 import models
-
+socketio = flask_socketio.SocketIO(app) 
 
 
 @app.route('/')

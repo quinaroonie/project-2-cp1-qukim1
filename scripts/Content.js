@@ -15,7 +15,7 @@ export class Content extends React.Component {
         };
     }
     
-   
+ 
     componentDidMount() {
         Socket.on('message received', (data) => {
             console.log("Content recieved message");
@@ -26,19 +26,10 @@ export class Content extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <h1>ChatBot</h1>
-                <MessageForm />
-                <div>
-                    Data: {this.state.data}
-                    
-                    
-                </div>
-            </div>
-        );
+        return <div style={{backgroundColor: 'white', position: 'absolute', left: '25%', width: '700px', height: '1000px', border: '1px solid #000'}}>
+        <h1>ChatBot</h1>
+        <body>
+        </body>
+        </div>;
     }
 }
-
-
-

@@ -1,5 +1,8 @@
 # models.py
-import flask_sqlalchemy, app
+import os
+import flask
+import flask_sqlalchemy
+app = flask.Flask(__name__)
 
 
 app.app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://quin:lan@localhost/postgres'
@@ -15,6 +18,5 @@ class Message(db.Model):
         
     def __repr__(self):
         return '<Message text: %s>' % self.text 
-
 
 
